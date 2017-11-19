@@ -1,14 +1,28 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Weather</title>
+  <title>Погода в местах отдыха</title>
+  <script src="assets/js/jquery-1.11.0.min.js"></script>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- //end-smoth-scrolling -->
+  <script>$(document).ready(function (c) {
+      $('.log-close').on('click', function (c) {
+        $('.login-bottom').fadeOut('slow', function (c) {
+          $('.login-bottom').remove();
+        });
+      });
+    });
+  </script>
+
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
 </html>

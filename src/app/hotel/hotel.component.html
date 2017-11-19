@@ -1,0 +1,42 @@
+<div class="element-left">
+    <div class="element-bg-img"><img src="assets/images/1.jpg" alt="" class="img-responsive"> </div>
+    <div class="element-left-bottom">
+       <div class="ele-strip">
+          <ul>
+             <li (click)="text=''"><a href="#">All</a></li>
+             <li (click)="text='CHEAP'"><a href="#">Cheap</a></li>
+             <li (click)="text='FISHING'"><a href="#">Fishing</a></li>
+             <li (click)="text='WINTER'" class="anc-bor"><a href="#">Winter</a></li>
+          </ul>
+       </div>
+       <div class="village">
+          <h3>Отели</h3>
+          <span class="line"> </span>
+          <div class="activity_box">
+             <div class="scrollbar" id="style-2">
+                <div *ngIf="hotels$ | async as hotels; else loadGif">
+                <div *ngFor="let hotel of hotels  | hotelsFilter:text; index as i ">
+                   <div  (click)="select(hotel)"  class="activity-row" >
+                      <div class="activity-desc">
+                         <h5 >{{hotel.name}}</h5>
+                         <p>{{hotel.address}}</p>
+                         <h6>{{hotel.phone}}</h6>
+                      </div>
+                      <div class="activity-img">
+                         <ul>
+                            <li><img src='assets/images/res.jpg'  alt=""/></li>
+                            <li><img src='assets/images/r1.jpg'  alt=""/></li>
+                         </ul>
+                      </div>
+                      <div class="clear"> </div>
+                   </div>
+                </div>
+             </div>
+             <ng-template #loadGif>
+                <img [src]="loadImg" alt="">
+             </ng-template>
+          </div>
+       </div>
+    </div>
+ </div>
+ </div>
