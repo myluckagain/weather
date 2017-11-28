@@ -1,5 +1,4 @@
 import { Observable } from 'rxjs/Observable';
-// import { delay } from 'rxjs/operators';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/delay';
 

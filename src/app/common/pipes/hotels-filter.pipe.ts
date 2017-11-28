@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class HotelsFilterPipe implements PipeTransform {
 
   public transform(hotels: Hotel[], searchTerm: string): Hotel[] {
-    if (!searchTerm) {
+    if (!searchTerm || searchTerm === 'All') {
       return hotels;
     }
     return hotels

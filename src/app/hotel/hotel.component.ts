@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { hotels$ } from '../data';
+// import { hotels$ } from '../data';
 import { Observable } from 'rxjs/Observable';
 import { EventEmitter } from '@angular/core';
 import { Output, Input } from '@angular/core';
+import { HotelsService } from '../common/services/hotels.service';
 
 @Component({
   selector: 'app-hotel',
@@ -12,26 +13,37 @@ import { Output, Input } from '@angular/core';
 export class HotelComponent implements OnInit {
 
   public hotels$: Observable<Hotel[]>;
-
+  public hotels: Hotel[];
+  private _filteredType: string;
+  public filters: string[];
   public loadImg = 'assets/images/gears.gif';
 
-  public text: string; // строка фильтра
 
 
 
+  constructor(
+    private __hotelsService: HotelsService
+  ) { }
+  
 
-  @Output()
-  public mySelect: EventEmitter<Hotel> = new EventEmitter();
-  constructor() { }
 
-  select(hotel: Hotel) {
-    this.mySelect.emit(hotel);
+  typeSelected(type: string) {
+
+
+    this._filteredType = type;
+
+
   }
 
+  public ngOnInit(): void {
+    this.filters = ['All', 'Cheap', 'Fishing', 'Winter'];
 
-  ngOnInit() {
-    this.hotels$ = hotels$;
+    this.hotels$ = this.__hotelsService.hotels$;
+
+
+
   }
+
 
 
 }

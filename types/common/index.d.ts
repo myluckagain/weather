@@ -1,11 +1,16 @@
+type Env = {
+  production: boolean,
+  baseUrl: string
+};
+
 type Hotel = {
   id: number,
   name: string,
   img: string,
-  address:string,
-  phone:  string,
+  address: string,
+  phone: string,
   weather: Weather,
-  social: Social,   
+  social: Social,
   type: string
 };
 

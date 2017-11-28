@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core';
+import { HotelsService } from './common/services/hotels.service';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,4 @@ import { Input } from '@angular/core';
 export class AppComponent {
   title = 'Отели';
 
-  public selectedHotel: Hotel;
 }
