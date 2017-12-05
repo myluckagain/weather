@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { HotelComponent } from './hotel/hotel.component';
 import { WeatherComponent } from './weather/weather.component';
 import { SocialComponent } from './social/social.component';
-import { HotelsFilterPipe } from './common/pipes/hotels-filter.pipe';
+import { HotelsFilterPipe } from './hotel/pipes/hotels-filter.pipe';
 import { HotelsService } from './common/services/hotels.service';
-import { CardComponent } from './card/card.component';
+import { CardComponent } from './hotel/card/card.component';
 import { BASE_URL_TOKEN, BASE_URL } from './config';
-import { HighlightDirective } from './common/directives/highlight.directive';
-import { InitDirective } from './common/directives/init.directive';
+import { HighlightDirective } from './hotel/highlight.directive';
+import { InitDirective } from './hotel/init.directive';
 
 @NgModule({
   declarations: [

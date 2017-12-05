@@ -19,7 +19,7 @@
                 <div class="scrollbar " id="style-2 ">
                     <div *ngIf="hotels$ | async as hotels; else loadGif ">
                         <div *ngFor="let hotel of hotels | hotelsFilter: _filteredType; first as f; index as i " 
-                              appInit [hotel]="hotel " [first]="f ">
+                              appInit [hotel]="hotel" [first]="f">
                             <app-card appHighlight [hotel]=hotel></app-card>
 
                         </div>

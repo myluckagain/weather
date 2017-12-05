@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
-import { HotelsService } from '../common/services/hotels.service';
+import { HotelsService } from '../../common/services/hotels.service';
 
 @Component({
   selector: 'app-card',

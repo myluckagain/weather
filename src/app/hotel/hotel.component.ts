@@ -13,7 +13,7 @@ import { HotelsService } from '../common/services/hotels.service';
 export class HotelComponent implements OnInit {
 
   public hotels$: Observable<Hotel[]>;
-  public hotels: Hotel[];
+
   private _filteredType: string;
   public filters: string[];
   public loadImg = 'assets/images/gears.gif';
@@ -24,10 +24,10 @@ export class HotelComponent implements OnInit {
   constructor(
     private __hotelsService: HotelsService
   ) { }
-  
 
 
-  typeSelected(type: string) {
+
+  public typeSelected(type: string) {
 
 
     this._filteredType = type;
